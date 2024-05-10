@@ -4,7 +4,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Link } from '../Link'
 import { ThemeSwitcher } from '../ThemeSwitcher'
 import { headerNavLinks } from '../../../../data/headerNavLinks';
-
+import Image from 'next/image'
 export function Header({ onToggleNav }: { onToggleNav: () => void }) {
   let router = useRouter()
   const searchParams = useSearchParams()
@@ -14,11 +14,11 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
     <header className="supports-backdrop-blur:bg-white/95 sticky top-0 z-40 overflow-x-hidden bg-white/75 py-3 backdrop-blur dark:bg-dark/75">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-3 xl:max-w-5xl xl:px-0">
         <div>
-          {/* <Link href="/" aria-label="logo">
-            <div className="flex items-center justify-between" data-umami-event="logo">
+          <Link href="/" aria-label="logo">
+            <div className="flex items-center justify-between">
               <div className="mr-3 flex items-center justify-center">
-                <NextImage
-                  src="https://avatars.githubusercontent.com/u/126372969?v=4"
+                <Image
+                  src="/static/images/favicon.png"
                   alt="Nawin logo"
                   width={45}
                   height={45}
@@ -26,16 +26,16 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
                 />
               </div>
             </div>
-          </Link> */}
+          </Link>
         </div>
         <div className="flex items-center text-base leading-5">
-          <div className="hidden space-x-2 sm:block">
+          <div className="hidden space-x-6  sm:block">
             {headerNavLinks.map((link) => {
-           
+
               return (
                 <Link key={link.title} href={link.href}>
                   <span
-                    className=''  
+                    className='hover:text-green-300'
                     data-umami-event={`nav-${link.href.replace('/', '')}`}
                   >
                     {link.title}

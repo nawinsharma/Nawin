@@ -6,8 +6,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <LayoutWrapper children={<HeroSection />
-        } />
+        <LayoutWrapper children={<HeroSection />} />
       </div>
     </>
   );

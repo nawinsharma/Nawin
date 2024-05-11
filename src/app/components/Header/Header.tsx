@@ -2,9 +2,10 @@
 import { Link } from '../Link'
 import { headerNavLinks } from '../../../../data/headerNavLinks';
 import Image from 'next/image'
+import clsx from 'clsx';
 
-export function Header() {
-  return (
+export function Header({ onToggleNav }: { onToggleNav: () => void }) {
+    return (
     <header className="supports-backdrop-blur:bg-white/95 sticky top-0 z-40 overflow-x-hidden bg-white/75 py-3 backdrop-blur dark:bg-dark/75">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-3 xl:max-w-5xl xl:px-0">
         <div>
@@ -14,8 +15,8 @@ export function Header() {
                 <Image
                   src="/static/images/favicon.png"
                   alt="Nawin logo"
-                  width={45}
-                  height={45}
+                  width={50}
+                  height={50}
                   className="rounded-full"
                 />
               </div>
@@ -24,12 +25,14 @@ export function Header() {
         </div>
         <div className="flex items-center text-base leading-5">
           <div className="hidden space-x-6  sm:block">
-            {headerNavLinks.map((link) => {
-
+          {headerNavLinks.map((link) => {
+              let className = clsx(
+                'inline-block rounded font-medium text-gray-900 hover:text-green-900  hover:underline dark:text-gray-100 py-1 px-2 sm:py-2 sm:px-3'
+              )
               return (
                 <Link key={link.title} href={link.href}>
                   <span
-                    className='hover:text-green-300'
+                    className={className}
                     data-umami-event={`nav-${link.href.replace('/', '')}`}
                   >
                     {link.title}
@@ -38,6 +41,26 @@ export function Header() {
               )
             })}
           </div>
+          <button
+            className="ml-2 mr-1 h-8 w-8 rounded sm:hidden"
+            type="button"
+            aria-label="Toggle Menu"
+            onClick={onToggleNav}
+            data-umami-event="mobile-nav-toggle"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="text-gray-900 dark:text-gray-100"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </header>

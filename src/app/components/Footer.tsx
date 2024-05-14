@@ -31,7 +31,7 @@ export function Footer() {
     </div>        <div className="my-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{`Copyright © ${new Date().getFullYear()}`}</div>
           <span>{` • `}</span>
-          <span>Nawin's 0 and 1🌟</span>
+          <span>Nawins 0 and 1🌟</span>
         </div>
       </div>
     </footer>

@@ -29,7 +29,7 @@ export function Footer() {
             <span data-umami-event="view-source">View source</span>
           </Link>
         </div>
-        <div className="text-center text-gray-400 font-bold ">
+        <div className="text-center text-gray-400 font-bold cursor-pointer hover:text-white">
           Made with ❤️ by Nawin
         </div>
         <div className="my-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">

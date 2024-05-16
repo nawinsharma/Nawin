@@ -8,7 +8,7 @@ import Link from "next/link";
 export function Projects() {
     return (
         <div id="projects" className="min-h-screen bg-black py-12 pt-36">
-            <h1 className="text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white">All projects ({projectsData.details.length})</h1>
+            <h1 className="text-4xl md:text-7xl text-center font-sans font-bold mb-8 text-white">All projects ({projectsData.details.length})</h1>
             <div className="flex flex-wrap justify-center">
                 {projectsData.details.map((project) => (
                     <CardContainer  key={`${project.demoLink}`} className="inter-var m-4">

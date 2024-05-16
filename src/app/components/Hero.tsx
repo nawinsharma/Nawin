@@ -22,11 +22,11 @@ export function HeroSection() {
           </div>
         </h1>
         <div className="flex items-center gap-5">
-          <span className="text-xl sm:text-3xl md:text-7xl text-center font-sans font-bold mb-[17px]8 text-white">
+        <span className="text-4xl sm:text-5xl md:text-7xl text-center font-sans font-bold mb-8 text-white">
             I&apos;m Nawin
           </span>
         </div>
-        <div className="mt-9 w-full flex text-gray-300  text-[20px] max-w-3xl leading-[30px]">
+        <div className="mt-9 w-full flex text-gray-300  text-sm  md:text-xl max-w-3xl leading-[30px]">
           A passionate Developer 🚀 having an experience of building Full Stack Web applications with JavaScript / TypeScript / Reactjs / Next js / Nodejs / Express / Graphql /  Hono   and some other cool libraries and frameworks.
         </div>
       </div>

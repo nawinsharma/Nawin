@@ -21,11 +21,11 @@
     {
       "id": 3,
       "title": "Blog Application",
-      "slug": "advanced-vocal-techniques",
+      "slug": "blog",
       "description": "A medium like blog application made using hono",
-      "image": "/projects/ecommerce.png",
-      "demoLink": "https://ecommerce-nawin.vercel.app/",
-      "github": "https://github.com/nawinkumarsharma"
+      "image": "/projects/blog.png",
+      "demoLink": "https://github.com/NawinKumarSharma/Medium-blog/",
+      "github": "https://github.com/NawinKumarSharma/Medium-blog/"
     },
     {
       "id": 4,

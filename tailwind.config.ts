@@ -26,6 +26,10 @@ const config = {
       },
     },
     extend: {
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(10px)',
+      },
       colors: {
         black: {
           DEFAULT: "#000",
@@ -162,7 +166,14 @@ const config = {
       },
     },
   },
+  variants: {
+    extend: {
+      backdropFilter: ['responsive', 'supports-backdrop-blur'],
+    },
+  },
   plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwindcss-filters'),
     require("tailwindcss-animate"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {

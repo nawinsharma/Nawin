@@ -6,12 +6,12 @@ import clsx from "clsx";
 
 export function Header({ onToggleNav }: { onToggleNav: () => void }) {
   return (
-    <header className="supports-backdrop-blur:bg-white/5 sticky top-0 z-40 overflow-x-hidden  py-3 backdrop-blur ">
+    <header className="supports-backdrop-blur:bg-white/5  top-0 z-40 fixed  overflow-x-hidden py-3 backdrop-blur  w-full ">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-3 xl:max-w-5xl xl:px-0">
         <div>
           <Link href="/" aria-label="logo">
             <div className="flex items-center justify-between">
-              <div className="mr-3 flex items-center justify-center">
+              <div className="ml-[-27rem] flex items-center justify-center">
                 <Image
                   src="/static/images/favicon.png"
                   alt="Nawin logo"
@@ -24,10 +24,10 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
           </Link>
         </div>
         <div className="flex items-center text-base leading-5">
-          <div className="hidden space-x-6  sm:block">
+          <div className="hidden space-x-14 mr-10 sm:block">
             {headerNavLinks.map((link) => {
               let className = clsx(
-                "inline-block rounded font-medium text-gray-900 hover:text-green-500 hover:tfont-extrabold  hover:underline dark:text-gray-100 py-1 px-2 sm:py-2 sm:px-3"
+                "inline-block rounded font-medium text-gray-900 hover:underline dark:text-gray-100 text-lg py-1 px-2 sm:py-2 sm:px-3"
               );
               return (
                 <Link key={link.title} href={link.href}>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.3",
     "i": "^0.3.7",
@@ -21,7 +22,8 @@
     "sonner": "^1.4.41",
     "sooner": "^1.1.4",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-filters": "^3.0.0"
   },
   "devDependencies": {
     "typescript": "^5",

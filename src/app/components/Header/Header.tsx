@@ -1,11 +1,11 @@
-"use client"
-import { Link } from '../Link'
-import { headerNavLinks } from '../../../../data/headerNavLinks';
-import Image from 'next/image'
-import clsx from 'clsx';
+"use client";
+import { Link } from "../Link";
+import { headerNavLinks } from "../../../../data/headerNavLinks";
+import Image from "next/image";
+import clsx from "clsx";
 
 export function Header({ onToggleNav }: { onToggleNav: () => void }) {
-    return (
+  return (
     <header className="supports-backdrop-blur:bg-white/5 sticky top-0 z-40 overflow-x-hidden  py-3 backdrop-blur ">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-3 xl:max-w-5xl xl:px-0">
         <div>
@@ -25,20 +25,20 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
         </div>
         <div className="flex items-center text-base leading-5">
           <div className="hidden space-x-6  sm:block">
-          {headerNavLinks.map((link) => {
+            {headerNavLinks.map((link) => {
               let className = clsx(
-                'inline-block rounded font-medium text-gray-900 hover:text-green-500 hover:tfont-extrabold  hover:underline dark:text-gray-100 py-1 px-2 sm:py-2 sm:px-3'
-              )
+                "inline-block rounded font-medium text-gray-900 hover:text-green-500 hover:tfont-extrabold  hover:underline dark:text-gray-100 py-1 px-2 sm:py-2 sm:px-3"
+              );
               return (
                 <Link key={link.title} href={link.href}>
                   <span
                     className={className}
-                    data-umami-event={`nav-${link.href.replace('/', '')}`}
+                    data-umami-event={`nav-${link.href.replace("/", "")}`}
                   >
                     {link.title}
                   </span>
                 </Link>
-              )
+              );
             })}
           </div>
           <button
@@ -64,5 +64,5 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
         </div>
       </div>
     </header>
-  )
+  );
 }

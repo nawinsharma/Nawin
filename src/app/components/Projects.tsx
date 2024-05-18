@@ -1,27 +1,37 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "../../../components/ui/3d-card";
+import {
+    CardBody,
+    CardContainer,
+    CardItem,
+} from "../../../components/ui/3d-card";
 import projectsData from "../../../data/projectsData.json";
 import Link from "next/link";
 
 export function Projects() {
     return (
         <div id="projects" className="min-h-screen bg-black py-12 pt-36">
-            <h1 className="text-4xl md:text-7xl text-center font-sans font-bold mb-8 text-white">All projects ({projectsData.details.length})</h1>
+            <h1 className="text-4xl md:text-7xl text-center font-sans font-bold mb-8 text-white">
+                All projects ({projectsData.details.length})
+            </h1>
             <div className="flex flex-wrap justify-center">
                 {projectsData.details.map((project) => (
-                    <CardContainer  key={`${project.demoLink}`} className="inter-var m-4">
+                    <CardContainer key={`${project.demoLink}`} className="inter-var m-4">
                         <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                             <CardItem
                                 translateZ="50"
-                                className="text-xl font-bold text-neutral-600 dark:text-white"
+                                className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1"
                             >
                                 {project.title}
                             </CardItem>
                             <CardItem
                                 translateZ="60"
                                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                                style={{
+                                    color: "#BEC1DD",
+                                    margin: "1vh 0",
+                                }}
                             >
                                 {project.description}
                             </CardItem>
@@ -44,7 +54,6 @@ export function Projects() {
                                         Github
                                     </CardItem>
                                 </Link>
-
                                 <Link href={`${project.demoLink}`} target="_blank">
                                     <CardItem
                                         translateZ={20}
@@ -60,5 +69,5 @@ export function Projects() {
                 ))}
             </div>
         </div>
-    )
+    );
 }

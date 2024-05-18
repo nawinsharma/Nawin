@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import { Link } from './Link'
-import NextJS from '../../../public/next.svg'
-import TailwindCSS from '../../../icons/tailwind.svg'
-import Typescript from '../../../icons/typescript.svg'
+import Image from "next/image";
+import { Link } from "./Link";
+import NextJS from "../../../public/next.svg";
+import TailwindCSS from "../../../icons/tailwind.svg";
+import Typescript from "../../../icons/typescript.svg";
 
 export function Footer() {
   return (
@@ -12,13 +12,25 @@ export function Footer() {
           <span className="mr-1 text-gray-400">Built with</span>
           <div className="flex space-x-1.5">
             <Link href="NextJs">
-              <Image src={NextJS} alt='next' className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
+              <Image
+                src={NextJS}
+                alt="next"
+                className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5"
+              />
             </Link>
             <Link href="TailwindCSS">
-              <Image src={TailwindCSS} alt='tailwind' className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
+              <Image
+                src={TailwindCSS}
+                alt="tailwind"
+                className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5"
+              />
             </Link>
             <Link href="Typescript">
-              <Image src={Typescript} alt='ts' className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
+              <Image
+                src={Typescript}
+                alt="ts"
+                className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5"
+              />
             </Link>
           </div>
           <span className="px-1 text-gray-400 dark:text-gray-500">-</span>
@@ -39,5 +51,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

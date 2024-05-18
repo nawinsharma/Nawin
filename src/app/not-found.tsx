@@ -11,5 +11,5 @@ export default function Custom404() {
                 className="flex justify-center content-center"
             />
         </div>
-    )
+    );
 }

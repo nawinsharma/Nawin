@@ -1,5 +1,12 @@
 "use client";
-import React, { useState } from "react";
+
+import React, { useState, useRef } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ScaleLoader } from "react-spinners";
+import emailjs from "@emailjs/browser";
+import { MailPlus, Nfc } from "lucide-react";
+
 import GithubIcon from "../../../public/github-icon.svg"
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import LinktreeIcon from "../../../public/linktree-logo-icon.svg";
@@ -8,39 +15,32 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Contact = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e:any) => {
+  const [message, setMessage] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+    try {
+      setLoading(true);
+      await emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, form.current!, process.env.NEXT_PUBLIC_PUBLIC_KEY);
+      toast.success("msg sent")
+      setMessage("");
+      form.current!.reset();
+    } catch (error) {
+      setLoading(false);
+      toast.error('error')
+      console.error("An error occurred:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
+  const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(event.target.value);
+  };
   return (
     <section
       id="contact"
@@ -57,6 +57,9 @@ const Contact = () => {
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
+        <a href="mailto:msg.nawin@gmail.com?body=Hello" target="_blank" className="flex items-center gap-2 text-[#ADB7BE] mb-8 hover:text-white text-xl font-medium">
+          <MailPlus />msg.nawin@gmail
+        </a>
         <div className="socials flex flex-row gap-5">
           <Link href="https://github.com/nawinkumarsharma" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
@@ -68,71 +71,64 @@ const Contact = () => {
             <Image height={30} width={30} src={LinktreeIcon} alt="Linktree" />
           </Link>
           <Link href="https://twitter.com/NawinScript" target="_blank">
-            <Image  height={50} width={50} src={TwitterIcon} alt="Twitter Icon" />
+            <Image height={50} width={50} src={TwitterIcon} alt="Twitter Icon" />
           </Link>
         </div>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-2xl mt-2">
-            Email sent successfully!
-          </p>
-        ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
-            <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
-              >
-                Your email
-              </label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="nawin@gmail.com"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Subject
-              </label>
-              <input
-                name="subject"
-                type="text"
-                id="subject"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-slate-900 hover:bg-slate-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+        <form className="flex flex-col" autoComplete="off" ref={form} onSubmit={sendEmail}>
+          <div className="mb-6">
+            <label
+              htmlFor="email"
+              className="text-white block mb-2 text-sm font-medium"
             >
-              Send Message
-            </button>
-          </form>
-        )}
+              Your email
+            </label>
+            <input
+              name="email"
+              type="email"
+              id="email"
+              required
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="nawin@gmail.com"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="subject"
+              className="text-white block text-sm mb-2 font-medium"
+            >
+              Subject
+            </label>
+            <input
+              name="subject"
+              type="text"
+              id="subject"
+              required
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Just saying hi"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="text-white block text-sm mb-2 font-medium"
+            >
+              Message
+            </label>
+            <textarea placeholder="Enter Your Message" className=" h-64 bg-[#18191E]  border-[#33353F] placeholder-[#9CA2A9] text-gray-100 p-4 rounded-lg w-full flex-auto  border-2" required autoComplete="false" name="message" value={message} onChange={handleMessageChange}></textarea>
+            {loading ? (
+              <button className="flex justify-center items-center gap-3 boxshadowbtn bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 px-5 rounded-lg w-full mt-5 disabled">
+                <ScaleLoader color="#808080" className=" scale-50" /> Processing.....
+              </button>
+            ) : (
+              <button className="flex justify-center items-center gap-3 boxshadowbtn bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 px-5 rounded-lg w-full mt-5">
+                <Nfc />
+                Contact
+              </button>
+            )}
+          </div>
+        </form>
       </div>
     </section>
   );

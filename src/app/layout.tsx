@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AnimatedCursor } from "./components/AnimatedCursor";
-import { Toaster } from "sonner";
 import { ThemeProvider } from "./provider";
+import { ToastContainer } from 'react-toastify';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
         <main className="dark:bg-black bg-white dark:bg-grid-small-white/[0.07] sm:dark:bg-grid-white/[0.03] bg-grid-black/[0.1]">
           <link rel="icon" href="/static/images/favicon.png" sizes="any" />
           <AnimatedCursor />
-          <Toaster />
+          <ToastContainer />
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

@@ -2,6 +2,7 @@ import React from "react";
 import { Spotlight } from "../../../components/ui/SpotLight";
 import clsx from "clsx";
 import { TextGenerateEffect } from "../../../components/ui/TextGenerateUi";
+import { Cover } from "../../../components/ui/cover";
 
 export function HeroSection() {
   let className = clsx(
@@ -49,6 +50,9 @@ export function HeroSection() {
           Web applications with JavaScript / TypeScript / Reactjs / Next js /
           Nodejs / Express / Graphql / Hono and some other cool libraries and
           frameworks.
+        </div>
+        <div className="text-2xl md:text-2xl lg:text-3xl font-semibold mt-24 flex flex-row justify-start max-w-7xl mx-auto text-center  relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+          Build amazing websites at <Cover className="ml-5">warp speed</Cover>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ export function Footer() {
               <Image
                 src={NextJS}
                 alt="next"
-                className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5"
+                className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5 bg-white"
               />
             </Link>
             <Link href="TailwindCSS">

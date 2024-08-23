@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AnimatedCursor } from "./components/AnimatedCursor";
 import { ThemeProvider } from "./provider";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
+import Cursor from "./components/Cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="dark:bg-black bg-white dark:bg-grid-small-white/[0.07] sm:dark:bg-grid-white/[0.03] bg-grid-black/[0.1]">
           <link rel="icon" href="/static/images/favicon.png" sizes="any" />
-          <AnimatedCursor />
+          <Cursor />
           <ToastContainer />
           <ThemeProvider
             attribute="class"

@@ -55,18 +55,6 @@ export function HeroSection() {
           Building amazing websites at{" "}
           <Cover className="ml-5">warp speed</Cover>
         </div>
-        <div className="absolute bg-slate-900 mt-10 p-4 bottom-7 left-0 right-0 w-full z-10 c-space">
-          <a href="#" className="w-fit">
-            {/* <button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" /> */}
-            <button className="sm:w-fit w-full sm:min-w-96">
-              <span className="relative flex h-3 w-3">
-                <span className="btn-ping"></span>
-                <span className="btn-ping_dot"></span>
-              </span>
-              Let&apos; work together
-            </button>
-          </a>
-        </div>
       </div>
     </div>
   );

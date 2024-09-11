@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { ToastContainer } from "react-toastify";
-import Cursor from "./components/Cursor";
+import ScrollToTop from "./components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="dark:bg-black bg-white dark:bg-grid-small-white/[0.07] sm:dark:bg-grid-white/[0.03] bg-grid-black/[0.1]">
           <link rel="icon" href="/static/images/favicon.png" sizes="any" />
-          <Cursor />
           <ToastContainer />
           <ThemeProvider
             attribute="class"
@@ -31,6 +30,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+          <ScrollToTop />
           </ThemeProvider>{" "}
         </main>
       </body>

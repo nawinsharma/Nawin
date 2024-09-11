@@ -52,7 +52,20 @@ export function HeroSection() {
           frameworks.
         </div>
         <div className="text-2xl md:text-2xl lg:text-3xl font-semibold mt-24 flex flex-row justify-start max-w-7xl mx-auto text-center  relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-          Building amazing websites at <Cover className="ml-5">warp speed</Cover>
+          Building amazing websites at{" "}
+          <Cover className="ml-5">warp speed</Cover>
+        </div>
+        <div className="absolute bg-slate-900 mt-10 p-4 bottom-7 left-0 right-0 w-full z-10 c-space">
+          <a href="#" className="w-fit">
+            {/* <button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" /> */}
+            <button className="sm:w-fit w-full sm:min-w-96">
+              <span className="relative flex h-3 w-3">
+                <span className="btn-ping"></span>
+                <span className="btn-ping_dot"></span>
+              </span>
+              `Let's work together`
+            </button>
+          </a>
         </div>
       </div>
     </div>

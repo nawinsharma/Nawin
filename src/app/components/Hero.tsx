@@ -63,7 +63,7 @@ export function HeroSection() {
                 <span className="btn-ping"></span>
                 <span className="btn-ping_dot"></span>
               </span>
-              `Let's work together`
+              Let&apos; work together
             </button>
           </a>
         </div>

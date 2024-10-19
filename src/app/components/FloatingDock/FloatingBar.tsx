@@ -5,6 +5,9 @@ import {
   IconShield,
   IconBrandProducthunt,
   IconMessage,
+  IconBrandGithub,
+  IconCapProjecting,
+  IconPackage,
 } from "@tabler/icons-react";
 
 export function FloatingBar() {
@@ -29,6 +32,13 @@ export function FloatingBar() {
         <IconBrandProducthunt className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#projects",
+    },
+    {
+      title: "Contributions",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#opensource",
     },
     {
       title: "Contact",

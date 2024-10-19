@@ -3,6 +3,14 @@ import { Spotlight } from "../../../components/ui/SpotLight";
 import clsx from "clsx";
 import { TextGenerateEffect } from "../../../components/ui/TextGenerateUi";
 import { Cover } from "../../../components/ui/cover";
+import Link from "next/link";
+import { FiSend } from "react-icons/fi";
+import Image from "next/image";
+
+import GithubIcon from "../../../public/github-icon.svg";
+import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import LinktreeIcon from "../../../public/linktree-logo-icon.svg";
+import TwitterIcon from "../../../public/twitter.svg";
 
 export function HeroSection() {
   let className = clsx(
@@ -45,15 +53,56 @@ export function HeroSection() {
           className=" text-4xl sm:text-5xl font-sans font-bold mb-8 md:text-6xl lg:text-7xl"
         />
 
-        <div className="mt-9 w-full flex text-gray-300  text-lg  md:text-xl max-w-3xl leading-[30px]">
+        <div className="mt-9 mb-10 w-full flex text-gray-300  text-lg  md:text-xl max-w-3xl leading-[30px]">
           A passionate Developer 🚀 having an experience of building Full Stack
-          Web applications with JavaScript / TypeScript / Reactjs / Next js /
-          Nodejs / Express / Graphql / Hono and some other cool libraries and
+          Web applications with JavaScript, TypeScript, Reactjs, Next js,
+          Nodejs, Express, Hono and some other cool libraries and
           frameworks.
         </div>
-        <div className="text-2xl md:text-2xl lg:text-3xl font-semibold mt-24 flex flex-row justify-start max-w-7xl mx-auto text-center  relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-          Building amazing websites at{" "}
-          <Cover className="ml-5">warp speed</Cover>
+        <Link
+          href="https://www.mergedandshare.in/profile/NawinKumarSharma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-4 md:mb-0 md:mr-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 ease-in-out"
+        >
+          <button
+            className={`
+        px-4 py-2 rounded-full 
+        flex items-center gap-2 
+        text-slate-100
+        shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
+        
+        transition-all
+
+        hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
+        hover:text-violet-500
+    `}
+          >
+            <FiSend />
+            <span>          Dive to my Open Source Contributions
+            </span>
+          </button>
+
+        </Link>
+
+        <div className="socials flex flex-row gap-5 mt-9">
+          <Link href="https://github.com/nawinkumarsharma" target="_blank">
+            <Image src={GithubIcon} alt="Github Icon" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/nawin-kumar-sharma-83009825a"
+            target="_blank"
+          >
+            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          </Link>
+          <Link href="https://twitter.com/NawinScript" target="_blank">
+            <Image
+              height={50}
+              width={50}
+              src={TwitterIcon}
+              alt="Twitter Icon"
+            />
+          </Link>
         </div>
       </div>
     </div>

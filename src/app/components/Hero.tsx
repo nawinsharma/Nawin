@@ -9,7 +9,6 @@ import Image from "next/image";
 
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import LinktreeIcon from "../../../public/linktree-logo-icon.svg";
 import TwitterIcon from "../../../public/twitter.svg";
 
 export function HeroSection() {
@@ -54,13 +53,16 @@ export function HeroSection() {
         />
 
         <div className="mt-9 mb-10 w-full flex text-gray-300  text-lg  md:text-xl max-w-3xl leading-[30px]">
-          A passionate Developer 🚀 having an experience of building Full Stack
-          Web applications with JavaScript, TypeScript, Reactjs, Next js,
-          Nodejs, Express, Hono and some other cool libraries and
-          frameworks.
+          A Full Stack Developer 🚀, always tinkering with the latest tech. I
+          love building robust and scalable web applications with beautiful UI.
+          I&#39;m currently immersed in learning WebSockets to build a real-time and scalable chat application.
+          I&#39;m always learning new
+          things, and I&#39;m excited to see where my next project takes me.
+          Open to new opportunities and eager to collaborate on innovative
+          projects.
         </div>
         <Link
-          href="https://www.mergedandshare.in/profile/nawinsharma"
+          href="https://www.mergedandshare.in/profile/NawinKumarSharma"
           target="_blank"
           rel="noopener noreferrer"
           className="mb-4 md:mb-0 md:mr-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 ease-in-out"
@@ -71,18 +73,13 @@ export function HeroSection() {
         flex items-center gap-2 
         text-slate-100
         shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
-        
-        transition-all
-
-        hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
+        transition-all hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
         hover:text-violet-500
     `}
           >
             <FiSend />
-            <span>          Dive to my Open Source Contributions
-            </span>
+            <span>Dive to my Open Source Contributions</span>
           </button>
-
         </Link>
 
         <div className="socials flex flex-row gap-5 mt-9">

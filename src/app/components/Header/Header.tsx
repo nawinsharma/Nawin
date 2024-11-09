@@ -42,7 +42,7 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
             })}
           </div>
           <button
-            className="ml-2 mr-1 h-8 w-8 rounded sm:hidden"
+            className="h-8 w-8 mr-12 rounded sm:hidden"
             type="button"
             aria-label="Toggle Menu"
             onClick={onToggleNav}

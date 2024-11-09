@@ -4,7 +4,7 @@ import { Projects } from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import { FloatingBar } from "./components/FloatingDock/FloatingBar"; // Adjust the path as necessary
-import OpenSource from "./components/ProofOfWork/OpenSource";
+// import OpenSource from "./components/ProofOfWork/OpenSource";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
             <HeroSection />
             <Skills />
             <Projects />
-            <OpenSource />
+            {/* <OpenSource /> */}
             <Contact />
           </LayoutWrapper>
         </div>

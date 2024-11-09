@@ -17,7 +17,7 @@ export function HeroSection() {
     "mb-8 bg-clip-text text-4xl font-extrabold leading-[60px] tracking-tight text-transparent md:text-7xl md:leading-[86px]"
   );
   return (
-    <div className="pb-20 pt-36 h-screen">
+    <div className="mt-6 sm:mt-28 h-screen">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"

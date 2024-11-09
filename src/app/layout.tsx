@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { ToastContainer } from "react-toastify";
-import ScrollToTop from "./components/ScrollToTop";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +30,6 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
-          <ScrollToTop />
           </ThemeProvider>{" "}
         </main>
         <Script async src="https://custom-web-widget.vercel.app/widget.umd.js"></Script>

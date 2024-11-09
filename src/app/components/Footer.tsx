@@ -35,7 +35,7 @@ export function Footer() {
           </div>
           <span className="px-1 text-gray-400 dark:text-gray-500">-</span>
           <Link
-            href={"https://github.com/nawinkumarsharma/nawin"}
+            href={"https://github.com/nawinsharma/nawin"}
             className="text-gray-500 underline underline-offset-4 dark:text-gray-400 hover:text-green-500"
           >
             <span data-umami-event="view-source">View source</span>

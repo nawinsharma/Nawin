@@ -72,7 +72,7 @@ const Contact = () => {
           msg.nawin@gmail
         </a>
         <div className="socials flex flex-row gap-5">
-          <Link href="https://github.com/nawinkumarsharma" target="_blank">
+          <Link href="https://github.com/nawinsharma" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
           <Link

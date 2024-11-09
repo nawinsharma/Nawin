@@ -7,7 +7,7 @@
       "description": "An E-Commerce website built with NextJS, TypeScript and TailwindCSS",
       "image": "/projects/ecommerce.png",
       "demoLink": "https://ecommerce-nawin.vercel.app/",
-      "github": "https://github.com/nawinkumarsharma"
+      "github": "https://github.com/nawinsharma"
     },
     {
       "id": 2,
@@ -15,8 +15,8 @@
       "slug": "paymentapp",
       "description": "payment application that has functionality of User Authentication Authorization using JWT, view Account Balance, Search and view other users and Send money to other users accounts",
       "image": "/projects/payment-app.png",
-      "demoLink": "https://github.com/NawinKumarSharma/Payment-app",
-      "github": "https://github.com/NawinKumarSharma/Payment-app"
+      "demoLink": "https://github.com/nawinsharma/Payment-app",
+      "github": "https://github.com/nawinsharma/Payment-app"
     },
     {
       "id": 3,
@@ -24,8 +24,8 @@
       "slug": "blog",
       "description": "A medium like blog application made using hono",
       "image": "/projects/blog.png",
-      "demoLink": "https://github.com/NawinKumarSharma/Medium-blog/",
-      "github": "https://github.com/NawinKumarSharma/Medium-blog/"
+      "demoLink": "https://github.com/nawinsharma/Medium-blog/",
+      "github": "https://github.com/nawinsharma/Medium-blog/"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "description": "This is a simple project of Flipping Cards game made by using concepts of HTML,CSS, JavaScript.",
       "image": "/projects/flippingcard.png",
       "demoLink": "https://flippingcard-memorygame.netlify.app/",
-      "github": "https://github.com/NawinKumarSharma/FlippingCards"
+      "github": "https://github.com/nawinsharma/FlippingCards"
     },
     {
       "id": 5,
@@ -42,8 +42,8 @@
       "slug": "pwd",
       "description": "Users can easily see how strong their password is based on the established criteria, and it encourages them to create strong and secure passwords to enhance their account security and can easily generate a strong random password that can be copied to clipboard.",
       "image": "/projects/passwordstrength.png",
-      "demoLink": "https://nawinkumarsharma.github.io/password-strength-meter/",
-      "github": "https://github.com/NawinKumarSharma/password-strength-meter"
+      "demoLink": "https://nawinsharma.github.io/password-strength-meter/",
+      "github": "https://github.com/nawinsharma/password-strength-meter"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "description": "Tic-Tac-Toe Game project implemented using React, TypeScript, and Vite! This project provides a modern and efficient development environment for building a classic Tic-Tac-Toe game.",
       "image": "/projects/tictactoe.png",
       "demoLink": "https://tictactoe-khel.netlify.app/ ",
-      "github": "https://github.com/NawinKumarSharma/Tik-Tak-Toe"
+      "github": "https://github.com/nawinsharma/Tik-Tak-Toe"
     }
   ]
 }

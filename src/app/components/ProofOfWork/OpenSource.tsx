@@ -24,7 +24,7 @@ const OpenSource: React.FC = () => {
      <Script async src="https://custom-web-widget.vercel.app/widget.umd.js" />
       
       {/* Use the widget component */}
-      <widget-web-component theme="dark" username="NawinKumarSharma" />
+      <widget-web-component theme="dark" username="nawinsharma" />
      </div>
     </>
   );

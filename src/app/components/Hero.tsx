@@ -60,7 +60,7 @@ export function HeroSection() {
           frameworks.
         </div>
         <Link
-          href="https://www.mergedandshare.in/profile/NawinKumarSharma"
+          href="https://www.mergedandshare.in/profile/nawinsharma"
           target="_blank"
           rel="noopener noreferrer"
           className="mb-4 md:mb-0 md:mr-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 ease-in-out"
@@ -86,7 +86,7 @@ export function HeroSection() {
         </Link>
 
         <div className="socials flex flex-row gap-5 mt-9">
-          <Link href="https://github.com/nawinkumarsharma" target="_blank">
+          <Link href="https://github.com/nawinsharma" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
           <Link

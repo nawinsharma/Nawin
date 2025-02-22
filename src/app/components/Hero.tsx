@@ -10,11 +10,12 @@ import Image from "next/image";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import TwitterIcon from "../../../public/twitter.svg";
+import LetterGlitch from "../../../components/ui/letterglitch";
 
 export function HeroSection() {
   let className = clsx(
     "bg-gradient-to-r from-yellow-600 to-red-600 dark:bg-gradient-to-l dark:from-emerald-500 dark:to-lime-600",
-    "mb-8 bg-clip-text text-4xl font-extrabold leading-[60px] tracking-tight text-transparent md:text-7xl md:leading-[86px]"
+    " bg-clip-text text-4xl font-extrabold leading-[60px] tracking-tight text-transparent md:text-7xl md:leading-[86px]"
   );
   return (
     <div className="mt-6 sm:mt-28 h-screen">
@@ -41,17 +42,29 @@ export function HeroSection() {
       </div>
 
       <div className=" p-4 max-w-7xl mx-auto relative z-10  w-full pt-20 md:pt-0">
-        <h1 className="text-4xl md:text-7xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          <div className={className}>
-            Hello, there!<i className="twa twa-waving-hand"></i>
-            <span className="wave text-black">👋</span>
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+              <div className={className}>
+                Hello, there!<i className="twa twa-waving-hand"></i>
+                <span className="wave text-black">👋</span>
+              </div>
+            </h1>
+            <TextGenerateEffect
+              words=" I'm Nawin"
+              className="text-4xl sm:text-5xl font-sans font-bold mb-8 md:text-6xl lg:text-7xl"
+            />
           </div>
-        </h1>
-        <TextGenerateEffect
-          words=" I'm Nawin"
-          className=" text-4xl sm:text-5xl font-sans font-bold mb-8 md:text-6xl lg:text-7xl"
-        />
-
+          <div className="mt-8 md:mt-0 md:ml-28">
+            <LetterGlitch
+              glitchColors={["#ff0000", "#00ff00", "#0000ff"]}
+              glitchSpeed={100}
+              centerVignette={true}
+              outerVignette={true}
+              smooth={true}
+            />
+          </div>
+        </div>
         <div className="mt-9 mb-10 w-full flex text-gray-300  text-lg  md:text-xl max-w-3xl leading-[30px]">
           A Full Stack Developer 🚀, always tinkering with the latest tech. I
           love building robust and scalable web applications with beautiful UI.
@@ -82,7 +95,7 @@ export function HeroSection() {
           </button>
         </Link>
 
-        <div className="socials flex flex-row gap-5 mt-9">
+        <div className="socials flex flex-row gap-5 mt-10">
           <Link href="https://github.com/nawinsharma" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>

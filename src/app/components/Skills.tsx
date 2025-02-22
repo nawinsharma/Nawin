@@ -4,7 +4,7 @@ import SkillBox from "./SkillsBox";
 export default function Skills() {
     const skills = allSkills;
     return (
-        <div className="mt-40 sm:mt-3 h-screen">
+        <div className="mt-96 sm:mt-3 h-screen">
             <div id="skills" className="my-2 sm:my-12">
                 <div className="text-center font-extrabold mt-20 mb-10 ">
                     <span className="text-4xl md:text-7xl text-center font-sans font-bold mb-8 text-white p-5">

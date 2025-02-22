@@ -11,6 +11,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import TwitterIcon from "../../../public/twitter.svg";
 import LetterGlitch from "../../../components/ui/letterglitch";
+import Threads from "../../../components/ui/threads";
 
 export function HeroSection() {
   let className = clsx(
@@ -114,7 +115,15 @@ export function HeroSection() {
             />
           </Link>
         </div>
+        <div className="w-full">
+          <Threads
+            amplitude={2}
+            distance={0}
+            enableMouseInteraction={true}
+          />
+        </div>
       </div>
+
     </div>
   );
 }

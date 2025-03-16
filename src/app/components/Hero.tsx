@@ -69,7 +69,7 @@ export function HeroSection() {
         <div className="mt-9 mb-10 w-full flex text-gray-300  text-lg  md:text-xl max-w-3xl leading-[30px]">
           A Full Stack Developer 🚀, always tinkering with the latest tech. I
           love building robust and scalable web applications with beautiful UI.
-          I&#39;m currently immersed in learning WebSockets to build a real-time and scalable chat application.
+          I&#39;m currently immersed in learning AI along with Devops.
           I&#39;m always learning new
           things, and I&#39;m excited to see where my next project takes me.
           Open to new opportunities and eager to collaborate on innovative

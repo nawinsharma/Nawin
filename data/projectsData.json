@@ -11,6 +11,24 @@
     },
     {
       "id": 2,
+      "title": "chat-with-image",
+      "slug": "pingimage",
+      "description": "A website where users can chat with images. It uses google gemini api key.",
+      "image": "/projects/chatwithimage.png",
+      "demoLink": "https://ping-image.vercel.app/",
+      "github": "https://github.com/nawinsharma/chat-with-image"
+    },
+    {
+      "id": 3,
+      "title": "Image-Generator",
+      "slug": "imagegenerator",
+      "description": "A website where user can give prompt and generate image and download, share it.",
+      "image": "/projects/imagegenerate.png",
+      "demoLink": "https://text2art.vercel.app/",
+      "github": "https://github.com/nawinsharma/image-generator"
+    },
+    {
+      "id": 4,
       "title": "E-Commerce",
       "slug": "guitar-fundamentals",
       "description": "An E-Commerce website built with NextJS, TypeScript and TailwindCSS",
@@ -19,7 +37,7 @@
       "github": "https://github.com/nawinsharma/e-commerce"
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "Confused-Digital",
       "slug": "digital",
       "description": "it works as more than a digital agency With a passion for innovation and a commitment to excellence, Confused-Digital harness the latest technologies to transform your digital vision into reality.",
@@ -28,7 +46,7 @@
       "github": "https://confused-digital.vercel.app/"
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "Payment Application",
       "slug": "paymentapp",
       "description": "payment application that has functionality of User Authentication Authorization using JWT, view Account Balance, Search and view other users and Send money to other users accounts",
@@ -37,7 +55,7 @@
       "github": "https://github.com/nawinsharma/Payment-app"
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "Blog Application",
       "slug": "blog",
       "description": "A medium like blog application made using hono",
@@ -46,7 +64,7 @@
       "github": "https://github.com/nawinsharma/Medium-blog/"
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "Flipping Card Game",
       "slug": "flipping-card",
       "description": "This is a simple project of Flipping Cards game made by using concepts of HTML,CSS, JavaScript.",

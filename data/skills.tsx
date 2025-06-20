@@ -71,7 +71,7 @@ export const allSkills: SkillsType[] = [
     icon: <SiPostgresql />,
   },
   {
-    name: "Github",
+    name: "Git",
     icon: <FaGithub />,
   },
 ];

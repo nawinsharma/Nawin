@@ -76,7 +76,7 @@ const Contact = () => {
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/nawin-kumar-sharma-83009825a"
+            href="https://www.linkedin.com/in/nawin-sharma-83009825a"
             target="_blank"
           >
             <Image src={LinkedinIcon} alt="Linkedin Icon" />

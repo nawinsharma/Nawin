@@ -78,10 +78,11 @@ export function HeroSection() {
           </p>
         </div>
         
-        {/* Button with improved responsive design */}
-        <div className="w-full flex justify-center px-4 sm:px-0">
+     <div className="flex justify-center items-center gap-6 sm:gap-8 md:gap-12">
+         {/* Button with improved responsive design */}
+         <div className="flex justify-center">
           <Link
-            href="https://www.mergedandshare.in/profile/NawinKumarSharma"
+            href="https://nawin.xyz/resume"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto max-w-sm sm:max-w-none"
@@ -98,15 +99,14 @@ export function HeroSection() {
             >
               <FiSend className="text-sm sm:text-base md:text-lg flex-shrink-0" />
               <span className="text-xs sm:text-sm md:text-base text-center leading-tight">
-                <span className="block sm:inline">Dive to my Open Source</span>
-                <span className="block sm:inline sm:ml-1">Contributions</span>
+                <span className="block sm:inline">Resume</span>
               </span>
             </button>
           </Link>
         </div>
 
         {/* Social icons with improved spacing */}
-        <div className="socials flex flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-10 md:mt-12 px-4 sm:px-0">
+        <div className="socials flex flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8">
           <Link href="https://github.com/nawinsharma" target="_blank" className="transition-transform hover:scale-110">
             <Image 
               src={GithubIcon} 
@@ -115,7 +115,7 @@ export function HeroSection() {
             />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/nawin-kumar-sharma-83009825a"
+            href="https://www.linkedin.com/in/nawin-sharma-83009825a"
             target="_blank"
             className="transition-transform hover:scale-110"
           >
@@ -136,6 +136,8 @@ export function HeroSection() {
           </Link>
         </div>
         
+
+     </div>
         {/* Threads component */}
         {/* <div className="w-full mt-8 sm:mt-10 md:mt-12">
           <Threads

@@ -16,6 +16,27 @@ import {
   SiExpress,
   SiGit,
   SiPrisma,
+  SiSocketdotio,
+  SiRedis,
+  SiApachekafka,
+  SiHono,
+  SiDocker,
+  SiGithubactions,
+  SiTurborepo,
+  SiLangchain,
+  SiAmazon,
+  SiAwsamplify,
+  SiKubernetes,
+  SiJenkins,
+  SiVercel,
+  SiNetlify,
+  SiNginx,
+  SiJest,
+  SiCypress,
+  SiStorybook,
+  SiFigma,
+  SiAdobexd,
+  SiWebrtc,
 } from "react-icons/si";
 
 export interface SkillsType {
@@ -24,19 +45,11 @@ export interface SkillsType {
 }
 
 export const allSkills: SkillsType[] = [
-  {
-    name: "Tailwind",
-    icon: <SiTailwindcss />,
-  },
-  {
-    name: "JavaScript",
-    icon: <FaJsSquare />,
-  },
+ 
   {
     name: "TypeScript",
     icon: <SiTypescript />,
   },
-
   {
     name: "React",
     icon: <FaReact />,
@@ -45,11 +58,6 @@ export const allSkills: SkillsType[] = [
     name: "Next.js",
     icon: <FaReacteurope />,
   },
-
-  {
-    name: "Git",
-    icon: <SiGit />,
-  },
   {
     name: "Node.js",
     icon: <FaNodeJs />,
@@ -57,6 +65,58 @@ export const allSkills: SkillsType[] = [
   {
     name: "Express",
     icon: <SiExpress />,
+  },
+  {
+    name: "Socket.io",
+    icon: <SiSocketdotio />,
+  },
+  {
+    name: "WebRTC",
+    icon: <SiWebrtc />,
+  },
+  {
+    name: "Redis",
+    icon: <SiRedis />,
+  },
+  {
+    name: "Kafka",
+    icon: <SiApachekafka />,
+  },
+  {
+    name: "Hono",
+    icon: <SiHono />,
+  },
+  {
+    name: "Docker",
+    icon: <SiDocker />,
+  },
+  {
+    name: "Git",
+    icon: <SiGit />,
+  },
+  {
+    name: "CI/CD",
+    icon: <SiGithubactions />,
+  },
+  {
+    name: "AWS",
+    icon: <SiAmazon />,
+  },
+  {
+    name: "Turborepo",
+    icon: <SiTurborepo />,
+  },
+  {
+    name: "Nginx",
+    icon: <SiNginx />,
+  },
+  {
+    name: "LangChain",
+    icon: <SiLangchain />,
+  },
+  {
+    name: "LangGraph",
+    icon: <SiLangchain />,
   },
   {
     name: "MongoDB",
@@ -69,9 +129,5 @@ export const allSkills: SkillsType[] = [
   {
     name: "Postgres",
     icon: <SiPostgresql />,
-  },
-  {
-    name: "Git",
-    icon: <FaGithub />,
-  },
+  }
 ];

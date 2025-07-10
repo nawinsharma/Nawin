@@ -68,76 +68,116 @@ export function HeroSection() {
         {/* Description text with improved responsive alignment */}
         <div className="mt-6 sm:mt-8 md:mt-9 mb-6 sm:mb-8 md:mb-10 w-full flex justify-center">
           <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl text-justify max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl leading-relaxed sm:leading-[28px] md:leading-[30px] lg:leading-[32px] px-4 sm:px-6 md:px-8">
-            A Full Stack Developer 🚀, always tinkering with the latest tech. I
+            A Full Stack Developer, always tinkering with the latest tech. I
             love building robust and scalable web applications with beautiful UI.
-            I&#39;m currently immersed in learning AI along with Devops.
-            I&#39;m always learning new
-            things, and I&#39;m excited to see where my next project takes me.
+            I have a strong foundation in TypeScript, MERN stack, and Next.js. Experienced in building scalable, user
+            friendly web applications that solve real problems. Familiar with GenAI tools like LangChain, LangGraph, and Vercel AI
+            SDK.
             Open to new opportunities and eager to collaborate on innovative
             projects.
           </p>
         </div>
         
-     <div className="flex justify-center items-center gap-6 sm:gap-8 md:gap-12">
-         {/* Button with improved responsive design */}
-         <div className="flex justify-center">
-          <Link
-            href="https://nawin.xyz/resume"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto max-w-sm sm:max-w-none"
-          >
-            <button
-              className={`
-            w-full sm:w-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full 
-            flex items-center justify-center gap-2 sm:gap-3
-            text-slate-100 text-sm sm:text-base md:text-lg
-            shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
-            transition-all hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
-            hover:text-violet-500 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700
-        `}
+        {/* Improved responsive button and social section */}
+        <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-10">
+          {/* All buttons and social icons in one line on desktop */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-6xl">
+            <Link
+              href="https://nawin.xyz/resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              <FiSend className="text-sm sm:text-base md:text-lg flex-shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base text-center leading-tight">
-                <span className="block sm:inline">Resume</span>
-              </span>
-            </button>
-          </Link>
-        </div>
+              <button
+                className={`
+                  w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full 
+                  flex items-center justify-center gap-2 sm:gap-3
+                  text-slate-100 text-sm sm:text-base md:text-lg font-medium
+                  shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
+                  transition-all duration-300 ease-in-out
+                  hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
+                  hover:scale-105 active:scale-95
+                  bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700
+                  min-h-[48px] sm:min-h-[52px] md:min-h-[56px]
+                  whitespace-nowrap
+                `}
+              >
+                <FiSend className="text-sm sm:text-base md:text-lg flex-shrink-0" />
+                <span className="text-sm sm:text-base md:text-lg font-medium">
+                  Resume
+                </span>
+              </button>
+            </Link>
+            
+            <Link
+              href="https://www.mergedandshare.in/profile/nawinsharma"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <button
+                className={`
+                  w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full 
+                  flex items-center justify-center gap-2 sm:gap-3
+                  text-slate-100 text-sm sm:text-base md:text-lg font-medium
+                  shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
+                  transition-all duration-300 ease-in-out
+                  hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
+                  hover:scale-105 active:scale-95
+                  bg-black
+                  min-h-[48px] sm:min-h-[52px] md:min-h-[56px]
+                  whitespace-nowrap
+                `}
+              >
+                <span className="text-sm sm:text-base md:text-lg font-medium">
+                  Open Source Contributions
+                </span>
+              </button>
+            </Link>
 
-        {/* Social icons with improved spacing */}
-        <div className="socials flex flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8">
-          <Link href="https://github.com/nawinsharma" target="_blank" className="transition-transform hover:scale-110">
-            <Image 
-              src={GithubIcon} 
-              alt="Github Icon" 
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/nawin-sharma-83009825a"
-            target="_blank"
-            className="transition-transform hover:scale-110"
-          >
-            <Image 
-              src={LinkedinIcon} 
-              alt="Linkedin Icon" 
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
-          </Link>
-          <Link href="https://twitter.com/NawinScript" target="_blank" className="transition-transform hover:scale-110">
-            <Image
-              height={50}
-              width={50}
-              src={TwitterIcon}
-              alt="Twitter Icon"
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
-          </Link>
+            {/* Social icons inline with buttons */}
+            <div className="flex flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8">
+              <Link 
+                href="https://github.com/nawinsharma" 
+                target="_blank" 
+                className="transition-all duration-300 hover:scale-110 hover:rotate-3"
+                aria-label="GitHub Profile"
+              >
+                <Image 
+                  src={GithubIcon} 
+                  alt="Github Icon" 
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/nawin-sharma-83009825a"
+                target="_blank"
+                className="transition-all duration-300 hover:scale-110 hover:rotate-3"
+                aria-label="LinkedIn Profile"
+              >
+                <Image 
+                  src={LinkedinIcon} 
+                  alt="Linkedin Icon" 
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                />
+              </Link>
+              <Link 
+                href="https://twitter.com/NawinScript" 
+                target="_blank" 
+                className="transition-all duration-300 hover:scale-110 hover:rotate-3"
+                aria-label="Twitter Profile"
+              >
+                <Image
+                  height={50}
+                  width={50}
+                  src={TwitterIcon}
+                  alt="Twitter Icon"
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                />
+              </Link>
+            </div>
+          </div>
         </div>
-        
-
-     </div>
         {/* Threads component */}
         {/* <div className="w-full mt-8 sm:mt-10 md:mt-12">
           <Threads

@@ -2,10 +2,10 @@
   "details": [
     {
       "id": 0,
-      "title": "shrinklyy-t3",
+      "title": "shrinklyy",
       "slug": "shrinklyy",
       "description": "A URL shortening application built using the T3 stack, which provides users with a simple and efficient way to shorten long URLs for easier sharing and tracking. It also includes authentication using NextAuth.",
-      "image": "/projects/shrinklyy.png",
+      "image": "/projects/trim.png",
       "demoLink": "https://trim.nawin.xyz",
       "github": "https://github.com/nawinsharma/shrinklyy-t3"
     },

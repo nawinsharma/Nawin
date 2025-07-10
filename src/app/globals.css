@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .btn-ping {
   @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
 }
@@ -93,6 +92,9 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  .theme {
+    --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+  }
 }
 
 @layer base {
@@ -118,3 +120,14 @@
     @apply border-border;}
   body {
     @apply bg-background text-foreground;}}
+
+@theme inline {
+  @keyframes pulse-slow {
+  0%, 100% {
+    transform: translateX(-100%);
+    }
+  50% {
+    transform: translateX(100%);
+    }
+  }
+}

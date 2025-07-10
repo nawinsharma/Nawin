@@ -13,7 +13,7 @@ export function Projects() {
     return (
         <div id="projects" className="min-h-screen bg-black py-6 pt-8">
             <h1 className="text-4xl md:text-7xl text-center font-sans font-bold mb-8 text-white">
-                All projects ({projectsData.details.length})
+                projects
             </h1>
             <div className="flex flex-wrap justify-center">
                 {projectsData.details.map((project) => (

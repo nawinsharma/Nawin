@@ -164,6 +164,14 @@ const config = {
   				to: {
   					transform: 'translate(calc(-50% - 0.5rem))'
   				}
+  			},
+  			'pulse-slow': {
+  				'0%, 100%': {
+  					transform: 'translateX(-100%)'
+  				},
+  				'50%': {
+  					transform: 'translateX(100%)'
+  				}
   			}
   		},
   		animation: {
@@ -176,7 +184,8 @@ const config = {
   			third: 'moveInCircle 40s linear infinite',
   			fourth: 'moveHorizontal 40s ease infinite',
   			fifth: 'moveInCircle 20s ease infinite',
-  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
+  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+  			'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
   		}
   	}
   },

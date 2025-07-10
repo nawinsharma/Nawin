@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
@@ -10,9 +10,58 @@ import { Provider as BalanceProvider } from 'react-wrap-balancer';
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  themeColor: "#000319",
+};
+
 export const metadata: Metadata = {
   title: "Nawin Sharma",
   description: "A full stack developer",
+  keywords: ["Nawin Sharma", "Full Stack Developer", "Portfolio", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Web Developer"],
+  authors: [{ name: "Nawin Sharma" }],
+  creator: "Nawin Sharma",
+  metadataBase: new URL("https://nawin.xyz"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Nawin Sharma",
+    description: "A full stack developer",
+    url: "https://nawin.xyz/",
+    siteName: "Nawin Sharma Portfolio",
+    images: [
+      {
+        url: "/og.png",
+        width: 1322,
+        height: 905,
+        alt: "Nawin Sharma - Full Stack Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nawin Sharma",
+    description: "A full stack developer",
+    images: ["/og.png"],
+    creator: "@NawinScript",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/static/images/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -23,29 +72,6 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
-        <head>
-          <meta charSet="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="description" content="A full stack developer" />
-          <meta name="keywords" content="Nawin Sharma, Full Stack Developer, Portfolio, JavaScript, TypeScript, React, Next.js, Node.js, Web Developer" />
-          <meta name="author" content="Nawin Sharma" />
-          <meta name="theme-color" content="#000319" />
-          <link rel="canonical" href="https://nawin.xyz/" />
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="icon" href="/static/images/favicon.png" sizes="any" />
-          {/* Open Graph tags */}
-          <meta property="og:title" content="Nawin Sharma" />
-          <meta property="og:description" content="A full stack developer" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://nawin.xyz/" />
-          <meta property="og:image" content="/og.png" />
-          {/* Twitter Card tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Nawin Sharma" />
-          <meta name="twitter:description" content="A full stack developer" />
-          <meta name="twitter:image" content="/og.png" />
-          <meta name="twitter:site" content="@NawinScript" />
-        </head>
         <body className={inter.className}>
           <main className="dark:bg-black bg-white dark:bg-grid-small-white/[0.07] sm:dark:bg-grid-white/[0.03] bg-grid-black/[0.1]">
             <ToastContainer />

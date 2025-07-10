@@ -29,14 +29,6 @@ export const metadata: Metadata = {
     description: "A full stack developer",
     url: "https://nawin.xyz/",
     siteName: "Nawin Sharma Portfolio",
-    images: [
-      {
-        url: "/og.png",
-        width: 1322,
-        height: 905,
-        alt: "Nawin Sharma - Full Stack Developer",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -44,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nawin Sharma",
     description: "A full stack developer",
-    images: ["/og.png"],
+    images: ["/twitter-image"],
     creator: "@NawinScript",
   },
   robots: {
@@ -60,7 +52,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon: "/static/images/favicon.png",
+    icon: "/icon",
   },
 };
 

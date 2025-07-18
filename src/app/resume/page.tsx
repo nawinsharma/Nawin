@@ -19,7 +19,7 @@ export default function ResumePage() {
       <main className="relative flex justify-center overflow-hidden items-center flex-col mx-auto h-screen">
         <div className="w-full h-full">
           <iframe
-            src="/my-resume.pdf"
+            src="/projects/my-resume.pdf"
             className="w-full h-full"
             title="Resume"
           />
@@ -27,7 +27,7 @@ export default function ResumePage() {
         <div className="fixed top-6 right-6 z-10">
         </div>
         <div className="fixed top-14 left-6 z-10">
-          <Link 
+          <Link
             href="/"
             className="px-5 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-white rounded-full transition-all duration-300 ease-in-out flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105 border border-gray-200 dark:border-gray-700"
           >

@@ -19,7 +19,7 @@ export default function ResumePage() {
       <main className="relative flex justify-center overflow-hidden items-center flex-col mx-auto h-screen">
         <div className="w-full h-full">
           <iframe
-            src="https://drive.google.com/file/d/195h6LvMMUNtgab-qGB3Z9HnMTOeiB8-i/view?usp=sharing"
+            src="/my-resume.pdf"
             className="w-full h-full"
             title="Resume"
           />
